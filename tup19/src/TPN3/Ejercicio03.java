@@ -8,46 +8,66 @@ public class Ejercicio03 {
 
 		Los datos para rellenar la matriz deben ser proporcionados por el usuario. 
 
-		Una vez que se llene todo el arreglo de arreglos se debe mostrar la información en la consola de una forma clara.
+		Una vez que se llene todo el arreglo de arreglos se debe mostrar la informaciÃ³n en la consola de una forma clara.
 	    matriz[0][0]="NOMBRE";
 		
 		matriz[1][0]="DNI";
 		
 		matriz[2][0]="EDAD";
 		
-		BONUS: ordenar alfabéticamente el arreglo.*/
+		BONUS: ordenar alfabÃ©ticamente el arreglo.*/
 		
 		String matriz[][] = new String [3][3];
+		String auxiliar[] = new String [3];
 
-	
-		Scanner p= new Scanner(System.in);
+		int x=0,c=0,y=0;
+		Scanner p = new Scanner(System.in);
 		
 		
 		
-		for (int x=0; x<matriz.length; x++) {
+		for (x=0; x<matriz.length; x++) {
 			
-				int c=0;
+				c=0;
 				System.out.println("Ingrese el nombre");
 				matriz[c][x]=p.nextLine();
+				
 				c++;
 				System.out.println("Ingrese el DNI");
-				matriz[c][x]=p.nextLine();
+				matriz[c][x]=p.nextLine()+"	";
+				
 				c++;
 				System.out.println("Ingrese la edad");
-				matriz[c][x]=p.nextLine();
+				matriz[c][x]=p.nextLine()+"		";
 				
 				
 		}
-		
-		for (int x=0;x<3;x++) {
+		//agregar otra estructura repetitiva de 3.
+		c=0;
+		for (int j=0;j<matriz.length;j++){
+			for (x=0 ; x <matriz.length ;x++){
+				for (y=0; y<matriz.length;y++){
+					if (y==0 && x!=2 ){
+						if (matriz[y][x].compareTo(matriz[y][x+1])>0){
+							for (int i=0 ;i<matriz.length ;i++){
+								auxiliar[i]=matriz[i][x+1];
+								matriz[i][x+1]=matriz[i][x];
+								matriz[i][x]=auxiliar[i];
+							}
+						}
+					}
 					
-			for (int y=0;y<3;y++) {
-				System.out.print(matriz[x][y]+" ");
+				}
+				
 			}
-			System.out.println();
 		}
 		
 		
+		for(String[] fila:matriz) {
+			for(String elemento:fila) {
+				System.out.print(elemento+" ");
+			}
+			System.out.println("");
+			}
 		
 	}
 
