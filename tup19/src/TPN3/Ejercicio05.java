@@ -7,6 +7,9 @@ public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		
+		/*Realice un programa que genere una matriz de 3x3 con números ingresados por el usuario por medio de la consola. 
+		Una vez terminada la carga de los elementos se debe mostrar primero la matriz cargada con los datos iniciales y 
+		luego la matriz con los datos ordenados de mayor a menor.*/
 		Scanner p = new Scanner(System.in);
 		int matriz[][] = new int [3][3];
 		int arreglo[] = new int [9];//ARREGLO AUXILIAR PARA ORDENAR LA MATRIZ
