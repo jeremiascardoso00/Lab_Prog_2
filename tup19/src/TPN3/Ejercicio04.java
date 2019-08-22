@@ -4,9 +4,9 @@ import java.util.Arrays;
 public class Ejercicio04 {
 
 	public static void main(String[] args) {
-		/*Realice un programa que genere una matriz de 3x3 con números al azar y la muestra utilizando la consola. 
+		/*Realice un programa que genere una matriz de 3x3 con nÃºmeros al azar y la muestra utilizando la consola. 
 
-		Una vez que muestre la matriz desordenada, debe mostrar también la matriz ordenada de menor a mayor*/
+		Una vez que muestre la matriz desordenada, debe mostrar tambiÃ©n la matriz ordenada de menor a mayor*/
 		int matriz[][] = new int [3][3];
 		int arreglo[] = new int [9];//ARREGLO AUXILIAR PARA ORDENAR LA MATRIZ
 		int cont=0;
@@ -37,7 +37,7 @@ public class Ejercicio04 {
 		}
 		System.out.println ("");
 		
-		System.out.println("MATRIZ ORDENADA");
+		System.out.println("MATRIZ ORDENADA DE MENOR A MAYOR");
 		for (int []fila:matriz){
 			for (int elemento:fila){
 				System.out.print(elemento+" ");
